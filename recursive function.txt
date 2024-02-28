@@ -1,0 +1,27 @@
+//Display the array elements in the same order using a recursive function
+
+#include <stdio.h>
+void ArrayElement(int arr1[], int initpos, int lim)
+{
+    if(initpos >= lim)	{
+        return;
+    }
+    printf("%d  ", arr1[initpos]);    //Prints the current array element
+    ArrayElement(arr1, initpos+1, lim);//calling the function  ArrayElement itself
+}
+void main(){
+    int arr1[50];
+    int n, i;
+	printf("\n\n Recursion : Print the array elements :\n");
+	printf("-------------------------------------------\n");
+	printf(" Input the number of elements to be stored in the array :");
+    scanf("%d",&n);
+    printf(" Input %d elements in the array :\n",n);
+    for(i=0;i<n;i++){
+	    printf(" element - %d : ",i);
+	    scanf("%d",&arr1[i]);}
+   printf(" The elements in the array are : ");
+    ArrayElement(arr1, 0, n);//call the function ArrayElement
+    printf("\n\n"); 
+}
+

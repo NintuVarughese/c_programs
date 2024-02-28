@@ -1,0 +1,12 @@
+//Write programs to demonstrate the use of storage classes in C.
+
+#include <stdio.h>
+int glo=40; //global variable
+static int sta = 30;    //static variable
+void main()
+{
+    int loc=10; //local variable
+    register int reg = 20;  //register variable
+    printf("\n Value of Local variable is %d \n Value of Register variable is %d \n Value of Static variable is %d \n Value of Global variable is %d",loc,reg,sta,glo);
+}
+
